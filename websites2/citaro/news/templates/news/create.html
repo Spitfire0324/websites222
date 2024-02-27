@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+
+
+{% block title %}State{% endblock %}
+
+
+{% block content %}
+<div class="features">
+    <h1>News on the site</h1>
+   <form method="post">
+       {% csrf_token %}
+       {{ form }}
+
+
+
+       <input type="text" placeholder="Name :" class="form-control"><br>
+       <input type="text" placeholder="Announce :" class="form-control"><br>
+       <textarea class="form-control" placeholder="Text :"></textarea>
+       <input type="date" placeholder="Date :" class="form-control"><br>
+       <input type="time" placeholder="Time :" class="form-control"><br>
+       <button class="btn-btn-warning" type="submit">Add</button>
+
+   </form>
+
+
+  </div>
+{% endblock %}
